@@ -18,6 +18,9 @@
             <TextBox Text="{Binding Num2, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Text="Сумма" />
             <TextBox Text="{Binding ResultNum, Mode=OneWay}" IsReadOnly="True" />
+            <Button Command="{Binding ChangeTypeOperation}">
+                <TextBlock Text="{Binding ButtonText}"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
