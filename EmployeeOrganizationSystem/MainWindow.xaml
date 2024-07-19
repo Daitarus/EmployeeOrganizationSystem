@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.8*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Первое число" />
+            <TextBox Text="{Binding Num1, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Второе число" />
+            <TextBox Text="{Binding Num2, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Сумма" />
+            <TextBox Text="{Binding ResultNum, Mode=OneWay}" IsReadOnly="True" />
+        </StackPanel>
     </Grid>
 </Window>

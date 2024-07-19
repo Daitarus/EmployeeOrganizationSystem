@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using CalculationServices.Services;
+using EmployeeOrganizationSystem.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +21,8 @@ namespace EmployeeOrganizationSystem
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainWindowViewModel(new SimpleCalculateService());
         }
     }
 }
